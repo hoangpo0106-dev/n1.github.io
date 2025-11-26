@@ -74,12 +74,12 @@ h2{text-align:center;margin:40px 0 10px;font-size:28px;color:#333;}
 h3{margin-top:12px;font-weight:600;}
 
 /* ========= MEMBER COLORS ========= */
-.card.yen{background:#baf3d6;}       /* mint xanh */
-.card.uyen{background:#ffc0dd;}      /* hồng nhạt */
-.card.vy{background:#e6ccff;}        /* tím nhạt */
-.card.hien{background:#fff3b3;}      /* vàng nhạt */
-.card.tuyen{background:#333;}         /* tối xám */
-.card.tuyen h3{color:#fff;}          /* chữ trắng cho tối */
+.card.yen{background:#baf3d6;}       
+.card.uyen{background:#ffc0dd;}     
+.card.vy{background:#e6ccff;}       
+.card.hien{background:#fff3b3;}     
+.card.tuyen{background:#333;}        
+.card.tuyen h3{color:#fff;}         
 
 /* ========= MEMBER HOVER GLOW ========= */
 .card.yen:hover{box-shadow:0 0 18px #a8ffe5,0 0 35px #71f7cc,0 0 50px #3beab1;border-color:#3beab1;}
@@ -95,19 +95,22 @@ h3{margin-top:12px;font-weight:600;}
 .card.lesson11{background:#c3ffe3;}
 .card.lesson12{background:#ffb6c1;}
 
-/* LESSON HOVER GLOW */
 .card.lesson8:hover{box-shadow:0 0 18px #76baff,0 0 35px #4da8ff;border-color:#2b98ff;}
 .card.lesson9:hover{box-shadow:0 0 18px #b38dff,0 0 35px #a06bff;border-color:#8a4cff;}
 .card.lesson10:hover{box-shadow:0 0 18px #ffb066,0 0 35px #ff9a3c;border-color:#ff861f;}
 .card.lesson11:hover{box-shadow:0 0 18px #8dffd8,0 0 35px #63f7bd;border-color:#3feaaa;}
 .card.lesson12:hover{box-shadow:0 0 18px #ff7fab,0 0 35px #ff5c92;border-color:#ff3370;}
 
-/* SHINE ANIMATION */
-@keyframes shine{
-  0%{box-shadow:0 0 20px #fff,0 0 35px #ff9,0 0 50px #fc0;}
-  50%{box-shadow:0 0 30px #fff,0 0 50px #ff0,0 0 70px #ff8;}
-  100%{box-shadow:0 0 20px #fff,0 0 35px #ff9,0 0 50px #fc0;}
+/* ========= FEEDBACK FORM ========= */
+form.card input, form.card textarea{border:none;border-radius:8px;padding:10px;margin:6px 0;width:100%;resize:none;}
+form.card{max-width:400px;width:100%;background:linear-gradient(135deg,#baf3d6,#3beab1);color:#fff;}
+form.card button{
+  width:100%;padding:12px;margin-top:10px;border:none;border-radius:10px;
+  background:#fff;color:#3beab1;font-weight:700;cursor:pointer;
+  box-shadow:0 0 10px #3beab1,0 0 20px #71f7cc;
+  transition:0.4s;
 }
+form.card button:hover{box-shadow:0 0 20px #3beab1,0 0 40px #71f7cc;}
 
 /* ========= FOOTER ========= */
 .footer-news{background:#eef4fa;padding:40px 20px 20px;margin-top:40px;font-size:15px;border-top:3px solid #cdd9e5;}
@@ -154,6 +157,29 @@ h3{margin-top:12px;font-weight:600;}
     <a href="#" class="card lesson10 reveal delay-3"><h3>BÀI 10</h3></a>
     <a href="#" class="card lesson11 reveal delay-4"><h3>BÀI 11</h3></a>
     <a href="#" class="card lesson12 reveal delay-5"><h3>BÀI 12</h3></a>
+</div>
+
+<!-- Form feedback -->
+<h2 class="reveal delay-1">📝 GỬI PHẢN HỒI 📝</h2>
+<div class="members" style="justify-content:center;">
+  <form class="card reveal delay-2">
+    <label>Họ tên:</label>
+    <input type="text" placeholder="Nhập họ tên" required>
+    
+    <label>Email:</label>
+    <input type="email" placeholder="Nhập email" required>
+    
+    <label>Số điện thoại:</label>
+    <input type="tel" placeholder="Nhập số điện thoại" required>
+    
+    <label>Lớp:</label>
+    <input type="text" placeholder="Nhập lớp" required>
+    
+    <label>Phản hồi:</label>
+    <textarea placeholder="Nhập phản hồi" rows="3"></textarea>
+    
+    <button type="submit">Gửi phản hồi</button>
+  </form>
 </div>
 
 <!-- Footer -->
